@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 header {
     background: #18072b;
@@ -87,47 +87,59 @@ a {
     opacity: 1;
 }
 
-form contact {
-    flex: 1;
-    padding: 20px;
+/* Contact Form Styles */
+#form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#contact-form {
-    margin: 20px;
+    flex-direction: column; /* Stack form elements vertically */
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form */
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 600px;
-    width: 100%;
-    background-color: #f9f9f9;
-}
-
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact-form button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contact-form button:hover {
-    background-color: #0056b3;
-}
-
-#validation-result {
-    margin-top: 10px;
-    color: red;
-}
+    border: 1px solid #ddd; /* Add a border around the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  #form input,
+  #form textarea {
+    margin-bottom: 15px; /* Space between form elements */
+    padding: 10px; /* Space inside the form elements */
+    border: 1px solid #ccc; /* Border for form elements */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for better readability */
+  }
+  
+  #form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+  }
+  
+  #form button {
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  #form button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+  }
+  
+  #validation-result {
+    margin-top: 10px; /* Space above the validation result */
+    color: red; /* Text color for validation messages */
+  }
+  
+  /*button style*/
+  button {
+    background-color: #00bcd4; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text */
+    display: inline-block; /* Inline-block for button layout */
+  }

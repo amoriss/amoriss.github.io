@@ -1,39 +1,38 @@
 async function handleSubmit(event) {
-	event.preventDefault();
+	event.preventDefault(); // Prevent default form submission
 	
+	const form = document.getElementById('form');
+	const resultDiv = document.getElementById('form-result');
 	const email = document.getElementById('email').value;
-	const resultDiv = document.getElementById('validation-result');
-
+	
 	// Validate email with EVA API
 	const isEmailValid = await validateEmail(email);
+	
 	if (!isEmailValid) {
 		resultDiv.textContent = 'The email address is invalid. Please enter a valid email.';
-		return false;
+		return false; // Prevent form submission
 	}
 
-	// If email is valid, submit the form
-	//document.getElementById('form').submit();
+	// Submit the form if email is valid
+	try {
+		const response = await fetch(form.action, {
+			method: form.method,
+			body: new FormData(form),
+			headers: { 'Accept': 'application/json' } // Ensure that the server responds with JSON
+		});
 
-	 // Submit the form
-	 fetch(form.action, {
-		method: form.method,
-		body: new FormData(form)
-	})
-	.then(response => {
 		if (response.ok) {
 			resultDiv.textContent = 'Form successfully sent!';
-			form.reset(); // Optionally reset the form after successful submission
+			form.reset(); // Optionally reset the form
 		} else {
 			resultDiv.textContent = 'There was an error sending the form. Please try again.';
 		}
-	})
-	.catch(error => {
+	} catch (error) {
 		resultDiv.textContent = 'There was an error sending the form. Please try again.';
 		console.error('Error:', error);
-	});
+	}
 
-
-	return false; // Prevents the default form submission
+	return false; // Prevent default form submission
 }
 
 async function validateEmail(email) {
@@ -46,7 +45,7 @@ async function validateEmail(email) {
 	try {
 		const response = await fetch(url, requestOptions);
 		const result = await response.json();
-		return result.status === 'valid';
+		return result.status === 'valid'; // Check the validity status
 	} catch (error) {
 		console.error('Error:', error);
 		return false;

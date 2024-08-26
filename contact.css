@@ -1,0 +1,61 @@
+body {
+  background-color: #18072b; /* Dark background color for the entire page */
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  color: #fff; /* Set text color to white for contrast */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+}
+
+h1 {
+  padding-top: 5%;
+  text-align: center;
+}
+
+/* Contact Form Styles */
+#form {
+    display: flex;
+    flex-direction:column; /* Stack form elements vertically */
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 5% auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a border around the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  #form input,
+  #form textarea {
+    margin-bottom: 15px; /* Space between form elements */
+    padding: 10px; /* Space inside the form elements */
+    border: 1px solid #ccc; /* Border for form elements */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for better readability */
+  }
+  
+  #form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+  }
+  
+  #form button {
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  #form button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+  }
+  
+  #validation-result {
+    margin-top: 10px; /* Space above the validation result */
+    color: red; /* Text color for validation messages */
+  }
+  

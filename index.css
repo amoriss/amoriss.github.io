@@ -1,20 +1,29 @@
 
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    /* flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 header {
     background: #18072b;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    /* position: fixed; */
-    width: 100%;
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    width: 100%; /* Ensure full width */
+    grid-area: header; /* Assign grid area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .container {
     padding: 2rem;
+    max-width: 1200px; /* Set a max-width for large screens */
+    margin: 0 auto; /* Center the container */
 }
+
 section {
     padding: 2rem 0;
     /* margin-top: 60px; */
@@ -23,30 +32,58 @@ footer {
     background: #18072b;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    padding: 2rem; /* Adjust padding for spacing */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
-ul{
-    padding-right: 75%;
-    
+
+footer p {
+    margin: 0 0 1rem; /* Space below the paragraph */
+    font-size: 1.5rem; /* Font size for better readability */
 }
+
+footer img {
+    margin: 0.5rem; /* Space around each icon */
+    max-width: 80px; /* Max width for icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; /* Center icons horizontally */
+    }
+
+    footer img {
+        max-width: 50px; /* Adjust size for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    footer img {
+        max-width: 40px; /* Further reduce icon size for small screens */
+    }
+}
+
 li {
-    display: inline;
+    /* display: inline; */
     text-decoration: none;
     padding: 0;
-    margin: 0;
+    margin: 0 10px;
 }
 a {
     text-decoration: none;
     color: white;
 }
+/* project styling*/
 
 .projects-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping of project items */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
 }
 
 .project {
@@ -87,51 +124,7 @@ a {
     opacity: 1;
 }
 
-/* Contact Form Styles */
-#form {
-    display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-    max-width: 600px; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the form */
-    padding: 20px;
-    border: 1px solid #ddd; /* Add a border around the form */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-  }
-  
-  #form input,
-  #form textarea {
-    margin-bottom: 15px; /* Space between form elements */
-    padding: 10px; /* Space inside the form elements */
-    border: 1px solid #ccc; /* Border for form elements */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size for better readability */
-  }
-  
-  #form textarea {
-    resize: vertical; /* Allow vertical resizing only */
-  }
-  
-  #form button {
-    padding: 10px 20px; /* Padding inside the button */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Rounded corners */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    font-size: 16px; /* Font size for button text */
-    cursor: pointer; /* Pointer cursor on hover */
-  }
-  
-  #form button:hover {
-    background-color: #0056b3; /* Darker background on hover */
-  }
-  
-  #validation-result {
-    margin-top: 10px; /* Space above the validation result */
-    color: red; /* Text color for validation messages */
-  }
-  
-  /*button style*/
+  /*resume button style*/
   button {
     background-color: #00bcd4; /* Button background color */
     border: none; /* Remove default border */

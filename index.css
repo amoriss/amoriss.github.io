@@ -201,18 +201,44 @@ a {
   margin: 20px; /* Adjust margin as needed */
 }
 
-/* Style for the image */
-.rounded-image {
-  width: 200px; /* Medium size (adjust as needed) */
-  height: 200px; /* Maintain square shape */
+/* Wrapper to manage image positioning */
+.image-wrapper {
+  position: relative; /* Relative positioning for absolute children */
+  width: 200px; /* Set width */
+  height: 200px; /* Set height */
+}
+
+/* Common style for images */
+.image {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
   border-radius: 15px; /* Rounded corners */
-  object-fit: cover; /* Ensures image covers the area without distortion */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+  position: absolute; /* Overlay images on top of each other */
+  background-size: cover; /* Ensure image covers the area */
+  background-position: center; /* Center the image */
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s; /* Smooth transition */
+}
+
+/* Default image styling */
+.default-image {
+  background-image: url('Amoriss.jpg'); /* Default image */
+  z-index: 1; /* Ensure the default image is above other content initially */
+}
+
+/* Hover image styling */
+.hover-image {
+  background-image: url('CoffeeMug.jpg'); /* Hover image */
+  opacity: 0; /* Hide hover image by default */
 }
 
 /* Hover effect */
-.rounded-image:hover {
+.image-wrapper:hover .default-image {
+  opacity: 0; /* Hide default image on hover */
+}
+
+.image-wrapper:hover .hover-image {
+  opacity: 1; /* Show hover image on hover */
   transform: scale(1.05); /* Slightly enlarge image on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for highlight effect */
-  border: 5px solid #ff69b4;
+  border: 5px solid #ff69b4; /* Pink border on hover */
 }

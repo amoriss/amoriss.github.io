@@ -293,3 +293,12 @@ a {
   height: auto;
   display: block;
 }
+
+/*---------REVIEWS--------------------*/
+#reviews {
+ text-align: center;
+}
+#reviews img {
+  width: 400px;
+
+}

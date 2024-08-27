@@ -51,3 +51,12 @@ async function validateEmail(email) {
 		return false;
 	}
 }
+
+
+/*---------PROJECT IMAGES---------------*/
+document.querySelectorAll('.project-overlay').forEach(function(overlay) {
+    var placeholder = overlay.getAttribute('data-placeholder');
+    if (placeholder) {
+      overlay.style.backgroundImage = 'url(' + placeholder + ')';
+    }
+  });

@@ -142,7 +142,7 @@ a {
   text-decoration: none;
   color: white;
 }
-/* project styling*/
+/* ------PROJECTS------------------*/
 
 .projects-container {
   display: flex;
@@ -154,44 +154,61 @@ a {
 .project {
   width: 200px;
   height: 200px;
-  background-color: #ddd;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Hide overflow */
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth scaling */
 }
 
 .project:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative; /* Ensure correct positioning for overlay */
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the placeholder image */
+  background-color: #ddd; /* Background color if image is not loaded */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .project-overlay iframe {
+  position: absolute; /* Absolute positioning for iframe */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border: none;
+  border: none; /* Remove default border */
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* Smooth transition */
+  opacity: 0; /* Hide iframe by default */
 }
 
 .project:hover .project-overlay {
-  opacity: 1;
+  background: none; /* Remove background when hovering */
 }
 
+.project:hover .project-overlay iframe {
+  opacity: 1; /* Show iframe on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for highlight effect */
+  border: 5px solid #ff69b4; /* Pink border on hover */
+}
+
+/* Add this to apply placeholder images from data attributes */
+.project-overlay {
+  background-image: var(--placeholder-image);
+}
+
+/* Add JavaScript to dynamically set placeholder images */
 
 
-/*IMAGE------------------*/
+
+/*ABOUT ME IMAGE------------------*/
 
 /* Container to center and style the image */
 .image-container {
@@ -204,8 +221,8 @@ a {
 /* Wrapper to manage image positioning */
 .image-wrapper {
   position: relative; /* Relative positioning for absolute children */
-  width: 200px; /* Set width */
-  height: 200px; /* Set height */
+  width: 225px; /* Set width */
+  height: 225px; /* Set height */
 }
 
 /* Common style for images */

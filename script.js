@@ -60,3 +60,28 @@ document.querySelectorAll('.project-overlay').forEach(function(overlay) {
       overlay.style.backgroundImage = 'url(' + placeholder + ')';
     }
   });
+
+/*-----------CAROUSEL--------------------*/
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const itemWidth = sliderItems[0].clientWidth; // Width of one item
+    const totalItems = sliderItems.length;
+    let currentIndex = 0;
+    const slidesToShow = 3; // Number of items to show at once
+    const intervalTime = 3000; // Time between slides in milliseconds
+
+    function updateSlider() {
+        sliderWrapper.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+
+    function slideNext() {
+        currentIndex = (currentIndex + 1) % (totalItems - slidesToShow + 1);
+        updateSlider();
+    }
+
+    setInterval(slideNext, intervalTime);
+
+    // Initialize
+    updateSlider();
+});

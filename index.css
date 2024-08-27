@@ -259,3 +259,37 @@ a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for highlight effect */
   border: 5px solid #ff69b4; /* Pink border on hover */
 }
+
+/*----------CAROUSEL---------------*/
+
+#canva {
+  text-align: center;
+  padding: 20px;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+  flex: 0 0 33.33%; /* Show 3 items at a time */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slider-item img {
+  width: 80%;
+  height: auto;
+  display: block;
+}

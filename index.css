@@ -101,17 +101,16 @@ footer button:hover {
   background-color: #ef4fa9;
 }
 footer button {
-    background-color: #00bcd4; /* Button background color */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the button */
-    color: white; /* Text color */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center text */
-    display: inline-block; /* Inline-block for button layout */
-  }
-  
+  background-color: #00bcd4; /* Button background color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center text */
+  display: inline-block; /* Inline-block for button layout */
+}
 
 @media (max-width: 768px) {
   footer {
@@ -206,8 +205,6 @@ a {
 
 /* Add JavaScript to dynamically set placeholder images */
 
-
-
 /*ABOUT ME IMAGE------------------*/
 
 /* Container to center and style the image */
@@ -238,13 +235,13 @@ a {
 
 /* Default image styling */
 .default-image {
-  background-image: url('Amoriss.jpg'); /* Default image */
+  background-image: url("Amoriss.jpg"); /* Default image */
   z-index: 1; /* Ensure the default image is above other content initially */
 }
 
 /* Hover image styling */
 .hover-image {
-  background-image: url('CoffeeMug.jpg'); /* Hover image */
+  background-image: url("CoffeeMug.jpg"); /* Hover image */
   opacity: 0; /* Hide hover image by default */
 }
 
@@ -295,10 +292,57 @@ a {
 }
 
 /*---------REVIEWS--------------------*/
-#reviews {
- text-align: center;
-}
-#reviews img {
-  width: 200px;
 
+#reviews {
+  position: relative;
+  width: 600px; /* Width of the visible area */
+  margin: 0 auto; /* Centers the carousel */
+  overflow: hidden; /* Hides overflowing content */
+  text-align: center;
 }
+
+
+
+/* Carousel section */
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for scrolling */
+  padding: 0%;
+}
+
+/* Individual images */
+.carousel-images img {
+  width: 600px; /* Width of each image */
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Navigation arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(55, 2, 2, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 20; /* Ensure arrows are clickable */
+  opacity: 0; /* Hide arrows initially */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+.arrow.show {
+  opacity: 1; /* Show arrows */
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* .arrow:disabled {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+} */

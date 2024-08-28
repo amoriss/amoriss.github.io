@@ -85,3 +85,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     updateSlider();
 });
+
+/*-----------REVIEWS CAROUSEL----------------*/
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselImages = document.querySelector('.carousel-images');
+    const images = carouselImages.querySelectorAll('img');
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
+    const imageWidth = 600; // Width of each image in pixels
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const offset = -currentIndex * imageWidth; // Calculate offset
+        carouselImages.style.transform = `translateX(${offset}px)`;
+        prevButton.classList.toggle('show', currentIndex > 0);
+        nextButton.classList.toggle('show', currentIndex < images.length - 1);
+    }
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    updateCarousel(); // Initialize carousel position
+});

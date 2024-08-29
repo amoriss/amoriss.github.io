@@ -17,6 +17,9 @@ header, footer {
   margin: 0; /* Remove default margins */
   padding:3rem;
 }
+
+/*--------------HEADER STYLING-------------------*/
+
 header {
   background-color: #18072b;
   color: #fff;
@@ -68,6 +71,49 @@ nav button a {
 nav button:hover {
   background-color: #0056b3; /* Darker background on hover */
 }
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #18072b;
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-menu ul {
+      flex-direction: column;
+  }
+
+  .nav-menu ul li {
+      margin: 1rem 0;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .nav-menu.active {
+      display: flex;
+  }
+}
+/*HEADER STYLING ENDING------------------------*/
 .container {
   padding: 2rem;
   max-width: 1200px; /* Set a max-width for large screens */

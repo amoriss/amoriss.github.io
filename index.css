@@ -182,12 +182,16 @@ a {
 }
 
 .project {
-  width: 200px;
+  width: 300px;
   height: 200px;
   position: relative;
   overflow: hidden; /* Hide overflow */
   cursor: pointer;
   transition: transform 0.3s ease; /* Smooth scaling */
+  /*delcarations added below are for View the Code buttons*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project:hover {
@@ -233,9 +237,26 @@ a {
 .project-overlay {
   background-image: var(--placeholder-image);
 }
+/*----PROJECT BUTTONS-----------------*/
+/* Style for the "View the Code" button */
+.project-button {
+  background-color: #00bcd4; /* Button background color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  color: white; /* Text color */
+  font-size: 14px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center text */
+  margin-top: 10px; /* Space between button and image */
+  display: inline-block; /* Ensure button does not stretch */
+}
 
+.project-button:hover {
+  background-color: #ef4fa9; /* Button hover color */
+}
 
-/*ABOUT ME IMAGE------------------*/
+/*-------------ABOUT ME IMAGE------------------*/
 
 /* Container to center and style the image */
 .image-container {
@@ -273,6 +294,7 @@ a {
 .hover-image {
   background-image: url("Images/AboutMe/CoffeeMug.jpg"); /* Hover image */
   opacity: 0; /* Hide hover image by default */
+  transition: opacity 0.3s;
 }
 
 /* Hover effect */

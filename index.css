@@ -1,17 +1,25 @@
-body {
+* {
+  box-sizing: border-box;
+}
+ body {
   background-color: #dbe1e8;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   flex-direction: column;
+  /* overflow-x:hidden ; */
+}
+
+header, footer {
+  width: 100%; /* Ensure full width */
+  padding: 1rem; /* Adjust as needed */
+  margin: 0; /* Remove default margins */
 }
 header {
   background-color: #18072b;
   color: #fff;
   text-align: center;
-  padding: 1rem 2rem; /* Adjust padding as needed */
-  width: 100%; /* Ensure full width */
   grid-area: header; /* Assign grid area */
   display: flex;
   align-items: center;
@@ -82,10 +90,13 @@ footer {
   background: #18072b;
   color: #fff;
   text-align: center;
-  padding: 2rem; /* Adjust padding for spacing */
-  width: 100%; /* Ensure full width */
   box-sizing: border-box; /* Ensure padding is included in width */
+  /* padding: 1rem;  */
+  /* display: flex; 
+  flex-direction: column;
+  align-items: center; */
 }
+
 
 footer p {
   margin: 0 0 1rem; /* Space below the paragraph */
@@ -100,6 +111,13 @@ footer img {
 footer button:hover {
   background-color: #ef4fa9;
 }
+
+footer .button-container {
+  display: flex; /* Use flexbox for button layout */
+  justify-content: center; /* Center buttons horizontally */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
 footer button {
   background-color: #00bcd4; /* Button background color */
   border: none; /* Remove default border */
@@ -108,17 +126,19 @@ footer button {
   color: white; /* Text color */
   font-size: 16px; /* Font size */
   cursor: pointer; /* Pointer cursor on hover */
-  text-align: center; /* Center text */
-  display: inline-block; /* Inline-block for button layout */
+  /* text-align: center; Center text */
+  /* width: 100px;
+  max-width: 300px; */
+  /* display: inline-block;  */
+  margin: 0.5rem; 
 }
 
 @media (max-width: 768px) {
   footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; /* Center icons horizontally */
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center content horizontally */
   }
+
 
   footer img {
     max-width: 50px; /* Adjust size for medium screens */
@@ -130,6 +150,17 @@ footer button {
     max-width: 40px; /* Further reduce icon size for small screens */
   }
 }
+@media (max-width: 480px) {
+  footer .button-container {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  footer button {
+    width: 100%; /* Full width for buttons on small screens */
+    margin: 0.5rem 0; /* Adjust vertical margin */
+  }
+}
+
 
 li {
   /* display: inline; */
@@ -203,7 +234,6 @@ a {
   background-image: var(--placeholder-image);
 }
 
-/* Add JavaScript to dynamically set placeholder images */
 
 /*ABOUT ME IMAGE------------------*/
 
@@ -235,13 +265,13 @@ a {
 
 /* Default image styling */
 .default-image {
-  background-image: url("Amoriss.jpg"); /* Default image */
+  background-image: url("Images/AboutMe/Amoriss.jpg"); /* Default image */
   z-index: 1; /* Ensure the default image is above other content initially */
 }
 
 /* Hover image styling */
 .hover-image {
-  background-image: url("CoffeeMug.jpg"); /* Hover image */
+  background-image: url("Images/AboutMe/CoffeeMug.jpg"); /* Hover image */
   opacity: 0; /* Hide hover image by default */
 }
 
@@ -257,7 +287,7 @@ a {
   border: 5px solid #ff69b4; /* Pink border on hover */
 }
 
-/*----------CAROUSEL---------------*/
+/*----------CAROUSEL FOR CANVA---------------*/
 
 #canva {
   text-align: center;
@@ -295,7 +325,8 @@ a {
 
 #reviews {
   position: relative;
-  width: 600px; /* Width of the visible area */
+  width: 100%; /* Width of the visible area */
+  max-width: 600px;
   margin: 0 auto; /* Centers the carousel */
   overflow: hidden; /* Hides overflowing content */
   text-align: center;
@@ -307,13 +338,24 @@ a {
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease; /* Smooth transition for scrolling */
-  padding: 0%;
+  /* padding: 0; */
+  flex-wrap: nowrap;
 }
 
 /* Individual images */
 .carousel-images img {
-  width: 600px; /* Width of each image */
-  flex-shrink: 0; /* Prevents shrinking */
+  /* width: 600px; /* Width of each image */
+  /* flex-shrink: 0; Prevents shrinking */ 
+  flex: 0 0 100%; /* Adjust to fill the container */
+  max-width: 100%; /* Ensure images don’t exceed container width */
+}
+.review-slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.review-slider-item {
+  flex: 0 0 100%; /* Ensure each item takes up 100% of the container */
 }
 
 /* Navigation arrows */
@@ -342,7 +384,17 @@ a {
   right: 10px;
 }
 
-/* .arrow:disabled {
-  background-color: rgba(0, 0, 0, 0.3);
-  cursor: not-allowed;
-} */
+
+@media (max-width: 768px) {
+  #reviews {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .carousel-images img {
+    width: 100%; /* Ensure images fit within container */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Additional adjustments for very small screens */
+}

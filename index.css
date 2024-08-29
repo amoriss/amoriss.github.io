@@ -112,6 +112,8 @@ section {
   background-size: cover; /* Ensure image covers the area */
   background-position: center; /* Center the image */
   transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s; /* Smooth transition */
+  transform: scale(1.0); /* Scale up the image */
+  
 }
 
 /* Default image styling */

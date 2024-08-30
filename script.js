@@ -126,8 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    console.log('JavaScript Loaded');
+    console.log('Hamburger:', hamburger);
+    console.log('Nav Menu:', navMenu);
 
     hamburger.addEventListener('click', () => {
+        console.log('Hamburger clicked');
         navMenu.classList.toggle('active');
     });
 });

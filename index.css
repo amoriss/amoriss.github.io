@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
- body {
+body {
   background-color: #dbe1e8;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,11 +11,12 @@
   /* overflow-x:hidden ; */
 }
 
-header, footer {
+header,
+footer {
   width: 100%; /* Ensure full width */
   padding: 1rem; /* Adjust as needed */
   margin: 0; /* Remove default margins */
-  padding:3rem;
+  padding: 3rem;
 }
 
 /*--------------HEADER STYLING-------------------*/
@@ -32,10 +33,13 @@ header {
   /* padding:2rem; */
 }
 
+/* Navigation Menu (Desktop) */
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 nav ul li {
   display: inline;
@@ -51,6 +55,7 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+/*---Button Styles---*/
 nav button {
   background-color: #ff0084;
   border: none;
@@ -84,33 +89,46 @@ nav button:hover {
   top: 1rem;
   right: 1rem;
 }
+
+/* Responsive Navigation Styles */
 @media (max-width: 768px) {
   .nav-menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #18072b;
-      width: 100%;
-      text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #18072b;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-menu ul {
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
 
   .nav-menu ul li {
-      margin: 1rem 0;
+    margin: 1rem 0;
   }
 
   .hamburger {
-      display: block;
+    display: block;
   }
 
   .nav-menu.active {
-      display: flex;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    right: 0;
+    background-color: #18072b;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 /*HEADER STYLING ENDING------------------------*/
@@ -125,11 +143,19 @@ section {
   /* margin-top: 60px; */
 }
 
-#about, #skills, #projects, #canva, #reviews h2{
+#about,
+#skills,
+#projects,
+#canva,
+#reviews h2 {
   text-align: center;
   font-size: 50px;
 }
-#about, #skills, #projects, #canva, #reviews p{
+#about,
+#skills,
+#projects,
+#canva,
+#reviews p {
   text-align: center;
   font-size: 40px;
 }
@@ -166,8 +192,7 @@ section {
   background-size: cover; /* Ensure image covers the area */
   background-position: center; /* Center the image */
   transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s; /* Smooth transition */
-  transform: scale(1.0); /* Scale up the image */
-  
+  transform: scale(1); /* Scale up the image */
 }
 
 /* Default image styling */
@@ -207,7 +232,6 @@ footer {
   align-items: center; */
 }
 
-
 footer p {
   margin: 0 0 1rem; /* Space below the paragraph */
   font-size: 1.5rem; /* Font size for better readability */
@@ -240,7 +264,7 @@ footer button {
   /* width: 100px;
   max-width: 300px; */
   /* display: inline-block;  */
-  margin: 0.5rem; 
+  margin: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -248,7 +272,6 @@ footer button {
     flex-direction: column; /* Stack elements vertically on smaller screens */
     align-items: center; /* Center content horizontally */
   }
-
 
   footer img {
     max-width: 50px; /* Adjust size for medium screens */
@@ -270,7 +293,6 @@ footer button {
     margin: 0.5rem 0; /* Adjust vertical margin */
   }
 }
-
 
 li {
   /* display: inline; */
@@ -366,7 +388,6 @@ a {
   background-color: #ef4fa9; /* Button hover color */
 }
 
-
 /*----------CAROUSEL FOR CANVA---------------*/
 
 #canva {
@@ -417,8 +438,6 @@ margin: 15%;
   text-align: center;
 }
 
-
-
 /* Carousel section */
 .carousel-images {
   display: flex;
@@ -431,7 +450,7 @@ margin: 15%;
 /* Individual images */
 .carousel-images img {
   /* width: 600px; /* Width of each image */
-  /* flex-shrink: 0; Prevents shrinking */ 
+  /* flex-shrink: 0; Prevents shrinking */
   flex: 0 0 100%; /* Adjust to fill the container */
   max-width: 100%; /* Ensure images don’t exceed container width */
 }
@@ -469,7 +488,6 @@ margin: 15%;
 .arrow.right {
   right: 10px;
 }
-
 
 @media (max-width: 768px) {
   #reviews {

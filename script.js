@@ -120,3 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCarousel(); // Initialize carousel position
 });
+
+/*--------- NAV HEADER HAMBUGER-------------*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+});

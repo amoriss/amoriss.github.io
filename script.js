@@ -61,7 +61,7 @@ document.querySelectorAll('.project-overlay').forEach(function(overlay) {
     }
   });
 
-/*-----------CAROUSEL--------------------*/
+/*-----------CANVA PDF CAROUSEL--------------------*/
 document.addEventListener('DOMContentLoaded', () => {
     const sliderWrapper = document.querySelector('.slider-wrapper');
     const sliderItems = document.querySelectorAll('.slider-item');
@@ -92,7 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = carouselImages.querySelectorAll('img');
     const nextButton = document.getElementById('next');
     const prevButton = document.getElementById('prev');
-    const imageWidth = 600; // Width of each image in pixels
+    // const imageWidth = 900; // Width of each image in pixels
+    const imageWidth = images[0].offsetWidth;
 
     let currentIndex = 0;
 

@@ -399,7 +399,7 @@ a {
 
 #canva {
   text-align: center;
-  padding: 20px;
+  /* padding: 32px; */
 }
 .slider-container {
   position: relative;

@@ -321,8 +321,8 @@ a {
 }
 
 .project {
-  width: 450px;
-  height: 450px;
+  width: 550px;
+  height: 550px;
   position: relative;
   overflow: hidden; /* Hide overflow */
   cursor: pointer;
@@ -348,6 +348,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+  
 }
 
 .project-overlay iframe {
@@ -363,6 +366,7 @@ a {
 
 .project:hover .project-overlay {
   background: none; /* Remove background when hovering */
+  border-color:5px solid #ff69b4; /* Apply pink border on hover */
 }
 
 .project:hover .project-overlay iframe {
@@ -376,6 +380,8 @@ a {
 .project-overlay {
   background-image: var(--placeholder-image);
 }
+
+
 /*----PROJECT BUTTONS-----------------*/
 /* Style for the "View the Code" button */
 .project-button {

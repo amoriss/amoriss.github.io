@@ -14,7 +14,6 @@ body {
 header,
 footer {
   width: 100%; /* Ensure full width */
-  padding: 1rem; /* Adjust as needed */
   margin: 0; /* Remove default margins */
   padding: 3rem;
 }
@@ -182,7 +181,6 @@ section {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  margin: 30px; /* Adjust margin as needed */
 }
 
 /* Wrapper to manage image positioning */

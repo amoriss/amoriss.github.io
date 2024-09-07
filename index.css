@@ -380,6 +380,15 @@ a {
 .project-overlay {
   background-image: var(--placeholder-image);
 }
+/* ------PROJECT INFO------------------*/
+.project-info {
+  padding:1rem;
+  font-size: 10px;
+  border-radius: 20px;
+  background-color: #2e154a;
+  color:#e4deea;
+  /* transition: background-color 0.3s ease-in-out; */
+}
 
 
 /*----PROJECT BUTTONS-----------------*/

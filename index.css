@@ -8,6 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   flex-direction: column;
+  scroll-padding-top: 3rem;
   /* overflow-x:hidden ; */
 }
 
@@ -21,6 +22,10 @@ footer {
 /*--------------HEADER STYLING-------------------*/
 
 header {
+  /* position: fixed;
+  top:0;
+  left:0;
+  z-index: 1000;  */
   background-color: #18072b;
   color: #fff;
   text-align: center;

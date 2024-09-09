@@ -21,6 +21,19 @@ footer {
 
 /*--------------HEADER STYLING-------------------*/
 
+/* Name Styles
+.header-name {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  height: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-weight: 700;
+
+} */
+
 header {
   /* position: fixed;
   top:0;
@@ -131,18 +144,15 @@ nav button:hover {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     position: absolute;
-    top: 100%;  /*Position below the header */
+    top: 100%; /*Position below the header */
     left: 0;
     right: 0;
     background-color: #18072b;
     width: 100%;
     text-align: center;
-    padding: 1rem 0; 
+    padding: 1rem 0;
   }
-
 }
-
-
 
 /*HEADER STYLING ENDING------------------------*/
 .container {
@@ -355,7 +365,6 @@ a {
   justify-content: center;
   overflow: hidden;
   border-radius: 15px;
-  
 }
 
 .project-overlay iframe {
@@ -371,7 +380,7 @@ a {
 
 .project:hover .project-overlay {
   background: none; /* Remove background when hovering */
-  border-color:5px solid #ff69b4; /* Apply pink border on hover */
+  border-color: 5px solid #ff69b4; /* Apply pink border on hover */
 }
 
 .project:hover .project-overlay iframe {
@@ -387,14 +396,13 @@ a {
 }
 /* ------PROJECT INFO------------------*/
 .project-info {
-  padding:1rem;
+  padding: 1rem;
   font-size: 10px;
   border-radius: 20px;
   background-color: #2e154a;
-  color:#e4deea;
+  color: #e4deea;
   /* transition: background-color 0.3s ease-in-out; */
 }
-
 
 /*----PROJECT BUTTONS-----------------*/
 /* Style for the "View the Code" button */

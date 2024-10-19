@@ -541,3 +541,21 @@ margin: 15%;
 @media (max-width: 480px) {
   /* Additional adjustments for very small screens */
 }
+
+.project-info {
+  padding: 1rem;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: rgba(203, 55, 193, 0.7);
+  display: block;
+  color: #e4deea;
+  text-align: center;
+  box-shadow: background-color 0.3s ease;
+  margin-top: 10px;
+  border: none;
+}
+
+.project-info:hover {
+  background-color: rgba(203, 55, 193, 1);
+  transform: scale(1.02);
+}

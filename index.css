@@ -546,7 +546,8 @@ margin: 15%;
   padding: 1rem;
   font-size: 16px;
   border-radius: 8px;
-  background-color: rgba(203, 55, 193, 0.7);
+  /* background-color: rgba(203, 55, 193, 0.7); */
+  background-color: #00bcd4;
   display: block;
   color: #e4deea;
   text-align: center;
@@ -556,6 +557,7 @@ margin: 15%;
 }
 
 .project-info:hover {
-  background-color: rgba(203, 55, 193, 1);
+  /* background-color: rgba(203, 55, 193, 1); */
+  background-color: #ef4fa9; 
   transform: scale(1.02);
 }

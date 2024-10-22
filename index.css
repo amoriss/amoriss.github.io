@@ -336,8 +336,8 @@ a {
 }
 
 .project {
-  width: 650px;
-  height: 650px;
+  width: 550px;
+  height: 550px;
   position: relative;
   overflow: hidden; /* Hide overflow */
   cursor: pointer;

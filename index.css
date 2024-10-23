@@ -579,3 +579,25 @@ margin: 15%;
   background-color: #ef4fa9; 
   transform: scale(1.02);
 }
+
+.screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  top:0;
+  left: 0;
+  position: absolute;
+}
+
+.emoji {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  
+}
+
+.project:hover .screenshot {
+  opacity: 1;
+}

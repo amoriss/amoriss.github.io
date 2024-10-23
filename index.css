@@ -275,6 +275,7 @@ footer img {
 footer button:hover {
   background-color: #ef4fa9;
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   /* background: linear-gradient(135deg, #ef4fa9, #d81b60); */
 }
 
@@ -285,19 +286,22 @@ footer .button-container {
 }
 
 footer button {
-  background-color: #00bcd4; /* Button background color */
-  border: none; /* Remove default border */
-  border-radius: 4px; /* Rounded corners */
+  background: transparent;
+  border: 2px solid #00bcd4;
+  /* background-color: #00bcd4; Button background color */
+  /* border: none; Remove default border */
+  border-radius: 50px; /* Rounded corners */
   padding: 20px 30px; /* Padding inside the button */
-  color: white; /* Text color */
+  color: #00bcd4; /* Text color */
   font-size: 24px; /* Font size */
   cursor: pointer; /* Pointer cursor on hover */
+  font-weight: 600;
   /*text-align: center; Center text */
   /* width: 100px;
   max-width: 300px; */
   /* display: inline-block;  */
   margin: 0.5rem;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {

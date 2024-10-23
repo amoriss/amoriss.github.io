@@ -47,7 +47,7 @@ header {
   grid-area: header; /* Assign grid area */
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 40px;
   position: relative;
   /* padding:2rem; */
 }
@@ -283,6 +283,7 @@ footer .button-container {
   display: flex; /* Use flexbox for button layout */
   justify-content: center; /* Center buttons horizontally */
   flex-wrap: wrap; /* Allow wrapping if needed */
+  margin: 2rem 0;
 }
 
 footer button {

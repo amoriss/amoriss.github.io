@@ -135,3 +135,48 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.toggle('active');
     });
 });
+
+// /*--------- Swiper-------------*/
+const reviews = [
+    { name: "John", feedback: "Great service!", relation: "Student", link: "https://www.google.com" },
+    { name: "Alice", feedback: "Very professional and helpful.", relation: "Client", link: "https://www.github.com" },
+    { name: "Michael", feedback: "Fantastic experience!", relation: "Mentor", link: "https://www.linkedin.com" },
+    { name: "Sarah", feedback: "Exceeded expectations!", relation: "Colleague", link: "https://www.stackoverflow.com" },
+    { name: "David", feedback: "Highly recommended.", relation: "Student", link: "https://www.twitter.com" },
+];
+
+// Dynamically generate review slides
+const reviewSlides = document.getElementById('review-slides');
+
+reviews.forEach(review => {
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide');
+    slide.innerHTML = `
+        <div class="review-card">
+            <h3>${review.name}</h3>
+            <p><strong>Relation:</strong> ${review.relation}</p>
+            <p>${review.feedback}</p>
+            <a href="${review.link}" target="_blank">Read more</a>
+        </div>
+    `;
+    reviewSlides.appendChild(slide);
+});
+
+// Initialize Swiper
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});

@@ -601,3 +601,36 @@ margin: 15%;
 .project:hover .screenshot {
   opacity: 1;
 }
+
+/* Swiper */
+
+.review-card {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 80%;
+  margin: auto;
+}
+
+.review-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.review-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.review-card a {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.review-card a:hover {
+  text-decoration: underline;
+}

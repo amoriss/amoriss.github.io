@@ -7,7 +7,8 @@
     <link rel="Icon" type="image/png" href="Images/IconImage/pink_heart_icon_transparent_background.png">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />          
     <link rel="stylesheet" href="index.css">
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -132,22 +133,14 @@
         </section>
 
         <section id="reviews">
-            
-                <h2>What People Are Saying</h2>
-    
-                <div class="carousel-wrapper">
-                    <section class="carousel-images">
-                        <img src="Images/Reviews/Bryan_Review.jpg" alt="Bryan's Review">
-                        <img src="Images/Reviews/JosephReview.jpg" alt="Joseph's Review">
-                        <img src="Images/Reviews/KimReview.jpg" alt="Kim's Review">
-                        <img src="Images/Reviews/AnnieReviewDarkMode.jpg" alt="Annie's Review">
-                        <img src="Images/Reviews/TaylorReview.jpg" alt="Taylor's Review">
-                        <img src="Images/Reviews/DerekReview.jpg" alt="Derek's Review">
-                    </section>
-                    <button class="arrow left" id="prev">←</button>
-                    <button class="arrow right" id="next">→</button>
-                </div>
-        </section>
+            <h2>What People Are Saying</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="review-slides"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>        
 
     </div>
     <footer>

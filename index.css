@@ -429,19 +429,30 @@ a {
 .project-button {
   background-color: #00bcd4; /* Button background color */
   border: none; /* Remove default border */
-  border-radius: 4px; /* Rounded corners */
-  padding: 20px 30px; /* Padding inside the button */
+  border-radius: 12px; /* Rounded corners */
+  padding: 15px 30px; /* Padding inside the button */
   color: white; /* Text color */
   font-size: 24px; /* Font size */
+  font-weight: 600;
+  letter-spacing: 1px;
   cursor: pointer; /* Pointer cursor on hover */
   text-align: center; /* Center text */
   margin-top: 30px; /* Space between button and image */
   margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
   display: inline-block; /* Ensure button does not stretch */
 }
 
 .project-button:hover {
   background-color: #ef4fa9; /* Button hover color */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-button:focus {
+  outline: none;
+  box-shadow:  0 0 0 3px rgba(239,79,169,.5);
 }
 
 /*----------CAROUSEL FOR CANVA---------------*/

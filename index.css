@@ -564,11 +564,12 @@ margin: 15%;
 }
 /*************AUTOMATIC REVIEW SWIPER*************/
 .swiper-container {
+  width: 600px;
   position: relative;
   margin: auto;
   background-color: #18072b;
   border-radius: 15px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   max-width: 800px;
   overflow: hidden;
@@ -578,11 +579,13 @@ margin: 15%;
 .review-card {
   background: rgba(255, 255,255, 0.95);
   border-radius: 10px;
-  padding: 20px;
-  margin:15px 0;
+  padding: 10px;
+  margin:5px 0;
   color: #18072b;
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .review-card:hover {
@@ -593,14 +596,15 @@ margin: 15%;
 
 .review-card h3 {
   margin:0;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #ff69b4;
 }
 
 .review-card p {
-  margin: 10px 0;
+  margin: 5px 0;
   color: #18072b;
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 12px !important;
 }
 
 .review-card a {
@@ -612,6 +616,10 @@ margin: 15%;
 .review-card a:hover {
   text-decoration: underline;
   color: #ff69b4;
+}
+
+.swiper-slide {
+  padding: 10px;
 }
 .swiper-button-next, .swiper-button-prev {
   color: #ff69b4 !important;
@@ -635,9 +643,9 @@ margin: 15%;
   background-color: rgba(255, 105, 180, 0.9);
   color: white;
   border-radius: 12px;
-  padding: 5px 10px;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   /* background: linear-gradient(135deg, #ff69b4 0%, #d5006d 100%); */
   /* border: 1px solid rgba(255, 255,255, 0.5); */

@@ -10,8 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ <!-- For Review Swiper -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+ <!-- For Scroll Effects -->
+<link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css" />
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
   
 </head>
 <body>
@@ -35,7 +39,7 @@
     </header>
 
     <div class="container">
-        <section id="about">
+        <section id="about" data-aos="fade-up" data-aos-easing="ease-in-out">
             <h1>C# Developer</h1>
             <p>“Transforming Tea into Code, One C# Line at a Time!”</p>
             <!-- <p>- Amoriss</p> -->
@@ -49,7 +53,7 @@
     </div>
     
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-up" data-aos-easing="ease-in-out">
         <h2>Projects</h2>
         <p>Click image to watch video code walkthrough.</p>   
         <div class="projects-container">
@@ -101,7 +105,7 @@
     </section>
     
 
-        <section id="skills">
+        <section id="skills" data-aos="fade-up" data-aos-easing="ease-in-out">
             <h2>Skills</h2>
             <div class="icon-container">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" width="10%" />
@@ -120,7 +124,7 @@
         </section>
 
 
-        <section id="canva">
+        <section id="canva" data-aos="fade-up" data-aos-easing="ease-in-out">
             <h2>My Canva Creations</h2>
             <div class="slider-container">
                 <div class="slider">
@@ -136,7 +140,7 @@
             </div>
         </section>
 
-        <section id="reviews">
+        <section id="reviews" data-aos="fade-up" data-aos-easing="ease-in-out">
             
                 <h2>What People Are Saying</h2>
                 <div class="swiper-container">
@@ -180,5 +184,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

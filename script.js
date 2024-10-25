@@ -121,6 +121,17 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel(); // Initialize carousel position
 });
 
+/*--------- SWIPER -------------*/
+
+const reviews = [
+    { name: "Taylor", feedback: "Amoriss is the best!", relation: "Student", link: "https://www.coursereport.com/schools/truecoders" },
+    { name: "Kim", feedback: "My instructor is so nice, so patient and so knowledgable; I'm sure she could have a job anywhere", relation: "Student", link: "https://g.co/kgs/6b9exGw" },
+    { name: "Bryan", feedback: "Hey Amoriss, hope all is going well! I just wanted to reach out and say thank you for all your help when I was in class! You were a great teacher. I got a job about 7 months ago with an amazing small company, my wife and I were able to buy a home  recently and honestly couldn't have done it without you guys! Just wanted to share and hope it's encouraging🙂", relation: "Student", link: "https://www.google.com" },
+    { name: "Joseph", feedback: "As someone who has been to a few different colleges and many and other bootcamps,...shout out to our teacher Amoriss who does a great job. I can say I have Left every class not feeling overwhelmed and being able to retain that knowledge!", relation: "Student", link: "https://www.linkedin.com/posts/truecodersio_truecoders-codingbootcamp-careerincode-activity-7190758675521650689-0Cqr?utm_source=share&utm_medium=member_desktop" },    
+    { name: "Annie", feedback: "Amoriss, was such an amazing teacher and was very knowledgeable, patient and helpful.", relation: "Student", link: "https://www.coursereport.com/schools/truecoders?shared_review=66099#reviews" },    
+    { name: "Derek", feedback: "Huge shoutout to Amoriss for spending a lot of her time helping me truly understand what I was doing.", relation: "Student", link: "https://www.coursereport.com/schools/truecoders" },
+  ];
+
 /*--------- NAV HEADER HAMBUGER-------------*/
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -134,4 +145,39 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Hamburger clicked');
         navMenu.classList.toggle('active');
     });
+});
+
+const reviewSlides = document.getElementById('review-slides');
+
+reviews.forEach(review => {
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide');
+    slide.innerHTML = `
+        <div class="review-card">
+            <h3>${review.name}</h3>
+            <p class="relation-badge"> ${review.relation}</p>
+            <p>${review.feedback}</p>
+            <a href="${review.link}" target="_blank">Read more</a>
+        </div>
+    `;
+    reviewSlides.appendChild(slide);
+});
+
+// Initialize Swiper
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
 });

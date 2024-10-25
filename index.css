@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Poppins", serif;
 }
 body {
   background-color: #dbe1e8;
@@ -273,7 +274,8 @@ footer img {
   transition: transform 0.3s ease;
 }
 footer button:hover {
-  background-color: #ef4fa9;
+  /* background-color: #ef4fa9; */
+  background-color: #00bcd4;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   /* background: linear-gradient(135deg, #ef4fa9, #d81b60); */

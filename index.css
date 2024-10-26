@@ -70,12 +70,27 @@ nav ul li a {
   color: #ef4fa9;
   font-weight: 600;
   transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 nav ul li a:hover {
   color: #ff69b4;
   /* color: #961572; Color on hover */
-  text-decoration: underline;
   transform: scale(1.05);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #ff69b4;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
 }
 
 /*---Button Styles---*/

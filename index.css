@@ -249,6 +249,33 @@ section {
   border: 5px solid #ff69b4; /* Pink border on hover */
 }
 
+/*------ABOUT ME - QUOTE NAME -------------*/
+.name {
+  font-weight: 700;
+  color:#ef4fa9;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.name:hover {
+  color:#ff69b4;
+  transform: translateY(-2px);
+}
+
+.name::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: rgba(239, 79, 169, 0.1);
+  border-radius: 5px;
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+
 /*-----------FOOTER-------------------*/
 footer {
   background: #18072b;

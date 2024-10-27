@@ -256,6 +256,12 @@ section {
 }
 #about {
   animation: fadeIn 0.5s ease-in;
+  background-color: rgba(239, 79, 169, 0.1);
+  /* background: linear-gradient(to bottom, rgba(255, 223, 230, 0.9), rgba(255, 255, 255, 1));  */
+     padding: 60px 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
 }
 .name {
   font-weight: 700;
@@ -263,6 +269,7 @@ section {
   margin-left: 10px;
   transition: color 0.3s ease;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: default;
 
 }
 
@@ -272,10 +279,11 @@ section {
 }
 
 /* .name:hover::before {
-  background-color: rgba(255, 105, 180, 0.3);
+  background-color: rgba(255, 105, 180, 0.3); 
 } */
 
-.name::before {
+
+/* .name::before {
   content: "";
   position: absolute;
   top: 0;
@@ -288,7 +296,7 @@ section {
   transition: background-color 0.3s ease;
   background: linear-gradient(to bottom, rgba(239, 79, 169, 0.1), rgba(255,255,255,0.1));
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /*-----------FOOTER-------------------*/
 footer {

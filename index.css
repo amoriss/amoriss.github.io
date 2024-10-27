@@ -207,6 +207,9 @@ section {
   position: relative; /* Relative positioning for absolute children */
   width: 350px; /* Set width */
   height: 350px; /* Set height */
+  border: 20px solid #18072b;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Common style for images */
@@ -243,8 +246,10 @@ section {
 .image-wrapper:hover .hover-image {
   opacity: 1; /* Show hover image on hover */
   transform: scale(1.05); /* Slightly enlarge image on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for highlight effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 20px #ff69b4;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); Add shadow for highlight effect */
+
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 20px #ff69b4; */
+  box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4;
   border: 5px solid #ff69b4; /* Pink border on hover */
   
 }
@@ -256,12 +261,12 @@ section {
 }
 #about {
   animation: fadeIn 0.5s ease-in;
-  background-color: rgba(239, 79, 169, 0.1);
+  /* background-color: rgba(239, 79, 169, 0.1); */
   /* background: linear-gradient(to bottom, rgba(255, 223, 230, 0.9), rgba(255, 255, 255, 1));  */
-     padding: 60px 30px; 
+     /* padding: 60px 30px; 
     border-radius: 15px; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    text-align: center;  */
 }
 .name {
   font-weight: 700;

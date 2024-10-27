@@ -205,8 +205,8 @@ section {
 /* Wrapper to manage image positioning */
 .image-wrapper {
   position: relative; /* Relative positioning for absolute children */
-  width: 350px; /* Set width */
-  height: 350px; /* Set height */
+  width: 450px; /* Set width */
+  height: 450px; /* Set height */
   border: 20px solid #18072b;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);

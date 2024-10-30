@@ -127,10 +127,12 @@ const reviews = [
     { name: "Taylor", feedback: "Amoriss is the best!", relation: "Student", link: "https://docs.google.com/presentation/d/10q9A9nj10WiStojQ9a3DUnXpBFoIbvp7WAD5MX5c_ks/edit?usp=sharing" },
     { name: "Kim", feedback: "My instructor is so nice, so patient and so knowledgable; I'm sure she could have a job anywhere", relation: "Student", link: "https://g.co/kgs/6b9exGw" },
     { name: "Bryan", feedback: "Hey Amoriss, hope all is going well! I just wanted to reach out and say thank you for all your help when I was in class! You were a great teacher. I got a job about 7 months ago with an amazing small company, my wife and I were able to buy a home  recently and honestly couldn't have done it without you guys! Just wanted to share and hope it's encouraging🙂", relation: "Student", link: "https://docs.google.com/presentation/d/1bd7-XtSfAGt06_LaAX59E3rxzJ3mrWr4nSJ_m-7-Bno/edit?usp=sharing" },
-    { name: "Joseph", feedback: "As someone who has been to a few different colleges and many and other bootcamps,...shout out to our teacher Amoriss who does a great job. I can say I have Left every class not feeling overwhelmed and being able to retain that knowledge!", relation: "Student", link: "https://www.linkedin.com/posts/truecodersio_truecoders-codingbootcamp-careerincode-activity-7190758675521650689-0Cqr?utm_source=share&utm_medium=member_desktop" },    
+    { name: "Joseph", feedback: "As someone who has been to a few different colleges and many and other bootcamps,...shout out to our teacher Amoriss who does a great job. I can say I have Left every class not feeling overwhelmed and being able to retain that knowledge!", relation: "Student", link: "https://www.linkedin.com/posts/truecodersio_truecoders-codingbootcamp-careerincode-activity-7190758675521650689-0Cqr?utm_source=share&utm_medium=member_desktop" }, 
+    { name: "Doug", feedback: "invaluable asset in any technical setting", relation: "Senior QA Engineer", link: "https://www.linkedin.com/in/amoriss/" },   
     { name: "Annie", feedback: "Amoriss, was such an amazing teacher and was very knowledgeable, patient and helpful.", relation: "Student", link: "https://www.coursereport.com/schools/truecoders?shared_review=66099#reviews" },    
     { name: "Derek", feedback: "Huge shoutout to Amoriss for spending a lot of her time helping me truly understand what I was doing.", relation: "Student", link: "https://www.coursereport.com/schools/truecoders" },
     { name: "Eric", feedback: "Thank you Amoriss", relation: "Student", link: "https://docs.google.com/presentation/d/174OXZCTsNtG5ISchi9-byqM1cZG6IZcTjm_lbfhTDCA/edit?usp=sharing" },
+    
   ];
 
 /*--------- NAV HEADER HAMBUGER-------------*/

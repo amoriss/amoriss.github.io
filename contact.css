@@ -1,7 +1,7 @@
 /* General body styling */
 body {
   background-color: #18072b; /* Dark background color for the entire page */
-  font-family: Arial, sans-serif;
+  font-family: "Poppins",serif;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   color: #fff; /* Set text color to white for contrast */
@@ -47,6 +47,11 @@ h1 {
 
 #form textarea {
   resize: vertical; /* Allow vertical resizing only */
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #00bcd4;
 }
 
 #form button {

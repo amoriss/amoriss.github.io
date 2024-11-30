@@ -132,6 +132,7 @@ const reviews = [
     { name: "Annie", feedback: "Amoriss, was such an amazing teacher and was very knowledgeable, patient and helpful.", relation: "Student", link: "https://www.coursereport.com/schools/truecoders?shared_review=66099#reviews" },    
     { name: "Derek", feedback: "Huge shoutout to Amoriss for spending a lot of her time helping me truly understand what I was doing.", relation: "Student", link: "https://www.coursereport.com/schools/truecoders" },
     { name: "Eric", feedback: "Thank you Amoriss", relation: "Student", link: "https://docs.google.com/presentation/d/174OXZCTsNtG5ISchi9-byqM1cZG6IZcTjm_lbfhTDCA/edit?usp=sharing" },
+    { name: "Selleck", feedback: "Hey Amoriss, how are you? I just finished my first week as a Core Services C# developer! Thank you for being such a great teacher!", relation: "Student", link: "https://docs.google.com/presentation/d/1kUQfrkMeTFGso0009afPQrT7cDK_VQE05vzO6xyJoa4/edit?usp=sharing" },
     
   ];
 
